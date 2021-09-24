@@ -1,37 +1,95 @@
-## Welcome to GitHub Pages
+# 8kyu
 
-You can use the [editor on GitHub](https://github.com/ogolajecinta/codewars-solutions/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Counting Sheep
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+https://www.codewars.com/kata/54edbc7200b811e956000556
 
-### Markdown
+Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```JS
+function countSheeps(arrayOfSheep) {
+  // TODO May the force be with you
+  const present = arrayOfSheep.filter( sheeps => sheeps === true);
+  return present.length; 
+}
 ```
+## Grasshopper - Summation
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+https://www.codewars.com/kata/55d24f55d7dd296eb9000030
 
-### Jekyll Themes
+Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ogolajecinta/codewars-solutions/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```JS
+var summation = function (num) {
+  // Code here
+  let sum = 0;
+  
+  //loop each number
+  for (i=1; i <= num; i++)
+    sum+= i;
+   return sum;
+}
+```
+## Even or Odd
 
-### Support or Contact
+https://www.codewars.com/kata/53da3dbb4a5168369a0000fe
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+```JS
+function even_or_odd(number) {
+  
+  //use parseInt() to convert input into integer
+  let num = parseInt(number);
+  
+  if(num%2 == 0 ){
+    return ("Even");
+  }
+  else{
+    return ("Odd");
+  } 
+}
+
+```
+## Remove First and Last Character
+
+https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0
+
+It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+
+```JS
+function removeChar(str){
+ //You got this!
+let charRemoved = str.slice(1, str.length-1);
+
+  return charRemoved;
+}
+
+```
+## Convert a String to a Number
+
+https://www.codewars.com/kata/544675c6f971f7399a000e79
+
+We need a function that can transform a string into a number. What ways of achieving this do you know?
+
+Note: Don't worry, all inputs will be strings, and every string is a perfectly valid representation of an integral number.
+
+```JS
+var stringToNumber = function(str){
+  // put your code here
+  return (parseInt(str));
+}
+
+```
+## Make UpperCase
+
+https://www.codewars.com/kata/57a0556c7cb1f31ab3000ad7
+
+Write a function which converts the input string to uppercase
+
+```JS
+function makeUpperCase(str) {
+  // Code here
+  return str.toUpperCase();
+}
+```
